@@ -37,7 +37,6 @@ This project demonstrates how to build a Linux-based virtual network, including:
 ├── network-diagram.png
 └── README.md # Step-by-step configuration guide
 
-Copiar
 ---
 
 ## 🌐 Network Topology
