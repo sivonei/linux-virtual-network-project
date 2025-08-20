@@ -1,0 +1,16 @@
+# Ubuntu Client Netplan Configuration
+# /etc/netplan/50-cloud-init.yaml
+
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      dhcp4: yes
+    enp0s8:
+      dhcp4: no
+      addresses:
+        - 192.168.56.101/24
+      nameservers:
+        addresses:
+          - 8.8.4.4
+          - 8.8.8.8
