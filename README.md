@@ -1,28 +1,81 @@
 # Linux Virtual Network Project - Proof of Concept
 
-This project was developed during my **Higher Diploma in Science in Computing** at CCT College Dublin.
+This project was developed during my **Higher Diploma in Science in Computing** at CCT College Dublin.  
+The objective was to design and implement a **virtualized Linux network** using VirtualBox and Ubuntu, simulating a client-server environment with networking, security, and file sharing services.
 
-The goal is to demonstrate a **virtualized Linux network environment** with VirtualBox and Ubuntu, including:
+---
 
-- Ubuntu Server (Apache web server)
-- Ubuntu Client (testing with Lynx browser)
-- Static IP configuration with Netplan
-- Secure remote access with SSH
+## 🚀 Project Overview
+
+The project demonstrates how to build a Linux-based virtual network, including:
+
+- Ubuntu Server (with Apache web server)
+- Ubuntu Client (used for testing with Lynx browser)
+- Static IP configuration with **Netplan**
+- Secure remote access with **SSH**
 - Firewall setup with **UFW** and **iptables**
 - File sharing using **Samba**
-- Monitoring with **Wireshark**
-- Research on Linux vs Windows boot process
+- Network monitoring with **Wireshark**
+- Comparison of Linux vs Windows boot processes
 
-## Repository Content
-- `report.pdf` → Full academic report with screenshots and explanations
-- `configs/` → Example configuration files (Netplan, Samba, Firewall)
-- `scripts/` → Shell scripts for setup (optional)
-- `README.md` → Overview of the project
+---
 
-## How to Reproduce
-1. Install **VirtualBox**
-2. Create two VMs with Ubuntu 24.04 (Server and Client)
-3. Configure NAT + Host-only network adapters
-4. Install Apache on the server:
+## 📂 Repository Structure
+
+.
+├── README.md # Project overview (this file)
+├── report.pdf # Full academic report with screenshots
+└── configs/ # Configurations and scripts
+├── netplan-server.yaml
+├── netplan-client.yaml
+├── ufw-allow-http-ssh.sh
+├── ufw-deny-http-ssh.sh
+├── iptables.v4
+├── apply-iptables.sh
+├── index.html
+├── setup-samba.sh
+├── network-diagram.png
+└── README.md # Step-by-step configuration guide
+
+yaml
+Copiar
+Editar
+
+---
+
+## 🌐 Network Topology
+
+The environment uses **two network adapters per VM**:  
+- `enp0s3` → NAT (internet access)  
+- `enp0s8` → Host-only (internal network `192.168.56.0/24`)  
+
+![Network Diagram](configs/network-diagram.png)
+
+---
+
+## ⚙️ How to Reproduce
+
+1. Clone this repository:
    ```bash
-   sudo apt update && sudo apt install apache2 -y
+   git clone https://github.com/sivonei/linux-virtual-network-project.git
+   cd linux-virtual-network-project/configs
+Follow the step-by-step configuration guide in configs/README.md.
+
+🎯 Key Learnings
+Configuring virtualized networks with Ubuntu and VirtualBox
+
+Applying firewall rules (UFW and iptables) for security
+
+Managing Linux services (Apache, SSH, Samba)
+
+Writing clear technical documentation
+
+Understanding differences in Linux vs Windows boot processes
+
+📖 Full Report
+For the complete academic report with detailed explanations and screenshots, see:
+👉 report.pdf
+
+👨‍💻 Author
+Sivonei Ribeiro dos Santos
+Higher Diploma in Science in Computing – CCT College Dublin
