@@ -1,22 +1,22 @@
 # Linux Virtual Network Project - Proof of Concept
 
-This project was developed during my **Higher Diploma in Science in Computing** at CCT College Dublin.  
-The objective was to design and implement a **virtualized Linux network** using VirtualBox and Ubuntu, simulating a client-server environment with networking, security, and file sharing services.
+This project was developed as part of my **Higher Diploma in Science in Computing** at CCT College Dublin.  
+The objective was to design and implement a **virtualized Linux network** using VirtualBox and Ubuntu, simulating a client-server environment with networking, security, and file-sharing services.
 
 ---
 
 ## 🚀 Project Overview
 
-The project demonstrates how to build a Linux-based virtual network, including:
+This project demonstrates how to build a Linux-based virtual network, including:
 
-- Ubuntu Server (with Apache web server)
-- Ubuntu Client (used for testing with Lynx browser)
-- Static IP configuration with **Netplan**
+- **Ubuntu Server** (with Apache web server)
+- **Ubuntu Client** (used for testing with the Lynx browser)
+- Static IP configuration using **Netplan**
 - Secure remote access with **SSH**
-- Firewall setup with **UFW** and **iptables**
-- File sharing using **Samba**
+- Firewall configuration using **UFW** and **iptables**
+- File sharing with **Samba**
 - Network monitoring with **Wireshark**
-- Comparison of Linux vs Windows boot processes
+- A comparison of Linux vs. Windows boot processes
 
 ---
 
@@ -37,10 +37,7 @@ The project demonstrates how to build a Linux-based virtual network, including:
 ├── network-diagram.png
 └── README.md # Step-by-step configuration guide
 
-yaml
 Copiar
-Editar
-
 ---
 
 ## 🌐 Network Topology
@@ -56,19 +53,17 @@ The environment uses **two network adapters per VM**:
 ## ⚙️ How to Reproduce
 
 1. Clone this repository:
+1. Clone this repository:
    ```bash
    git clone https://github.com/sivonei/linux-virtual-network-project.git
    cd linux-virtual-network-project/configs
-Follow the step-by-step configuration guide in configs/README.md.
-
-🎯 Key Learnings
-Configuring virtualized networks with Ubuntu and VirtualBox
-
-Applying firewall rules (UFW and iptables) for security
-
-Managing Linux services (Apache, SSH, Samba)
-
-Writing clear technical documentation
+   ```
+## 🎯 Key Learnings
+- Configuring virtualized networks with Ubuntu and VirtualBox
+- Applying firewall rules (UFW and iptables) for security
+- Managing Linux services (Apache, SSH, Samba)
+- Writing clear technical documentation
+- Understanding differences in Linux vs Windows boot processes
 
 Understanding differences in Linux vs Windows boot processes
 
@@ -76,6 +71,6 @@ Understanding differences in Linux vs Windows boot processes
 For the complete academic report with detailed explanations and screenshots, see:
 👉 report.pdf
 
-👨‍💻 Author
-Sivonei Ribeiro dos Santos
+## 👨‍💻 Author
+Sivonei Ribeiro dos Santos  
 Higher Diploma in Science in Computing – CCT College Dublin
