@@ -45,8 +45,6 @@ The environment uses **two network adapters per VM**:
 - `enp0s3` → NAT (internet access)  
 - `enp0s8` → Host-only (internal network `192.168.56.0/24`)  
 
-![Network Diagram](configs/network-diagram.png)
-
 ---
 
 ## ⚙️ How to Reproduce
