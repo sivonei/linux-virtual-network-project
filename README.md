@@ -1,73 +1,91 @@
-# Linux Virtual Network Project - Proof of Concept
+# Linux Virtual Network Project – Proof of Concept
 
-This project was developed as part of my **Higher Diploma in Science in Computing** at CCT College Dublin.  
-The objective was to design and implement a **virtualized Linux network** using VirtualBox and Ubuntu, simulating a client-server environment with networking, security, and file-sharing services.
+Welcome! This repository contains a hands-on project for building a **virtualized Linux network**, created as part of my Higher Diploma in Science in Computing at CCT College Dublin.  
+The goal: **Design and implement a secure, functional client-server environment** using VirtualBox and Ubuntu, showcasing networking, security, and file-sharing services.
 
 ---
 
-## 🚀 Project Overview
+## 🚀 Project Highlights
 
-This project demonstrates how to build a Linux-based virtual network, including:
+This project demonstrates:
 
-- **Ubuntu Server** (with Apache web server)
-- **Ubuntu Client** (used for testing with the Lynx browser)
-- Static IP configuration using **Netplan**
-- Secure remote access with **SSH**
-- Firewall configuration using **UFW** and **iptables**
-- File sharing with **Samba**
+- **Ubuntu Server** with Apache web server
+- **Ubuntu Client** for testing (Lynx browser)
+- Static IP setup via **Netplan**
+- Secure remote access using **SSH**
+- Firewall configuration with **UFW** and **iptables**
+- File sharing using **Samba**
 - Network monitoring with **Wireshark**
-- A comparison of Linux vs. Windows boot processes
+- Comparison: Linux vs. Windows boot processes
 
 ---
 
 ## 📂 Repository Structure
 
+```
 .
-├── README.md # Project overview (this file)
-├── report.pdf # Full academic report with screenshots
-└── configs/ # Configurations and scripts
-├── netplan-server.yaml
-├── netplan-client.yaml
-├── ufw-allow-http-ssh.sh
-├── ufw-deny-http-ssh.sh
-├── iptables.v4
-├── apply-iptables.sh
-├── index.html
-├── setup-samba.sh
-├── network-diagram.png
-└── README.md # Step-by-step configuration guide
+├── README.md                 # Project overview (this file)
+├── report.pdf                # Academic report with screenshots & details
+└── configs/                  # Configuration files & scripts
+    ├── netplan-server.yaml
+    ├── netplan-client.yaml
+    ├── ufw-allow-http-ssh.sh
+    ├── ufw-deny-http-ssh.sh
+    ├── iptables.v4
+    ├── apply-iptables.sh
+    ├── index.html
+    ├── setup-samba.sh
+    ├── network-diagram.png
+    └── README.md             # Step-by-step configuration guide
+```
 
 ---
 
 ## 🌐 Network Topology
 
-The environment uses **two network adapters per VM**:  
+Each VM uses **two network adapters**:  
 - `enp0s3` → NAT (internet access)  
-- `enp0s8` → Host-only (internal network `192.168.56.0/24`)  
+- `enp0s8` → Host-only (internal network: `192.168.56.0/24`)  
+
+See `network-diagram.png` for a visual overview.
 
 ---
 
 ## ⚙️ How to Reproduce
 
-1. Clone this repository:
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/sivonei/linux-virtual-network-project.git
-   cd linux-virtual-network-project/configs
-   ```
+Clone this repository and access the configuration files:
+
+```bash
+git clone https://github.com/sivonei/linux-virtual-network-project.git
+cd linux-virtual-network-project/configs
+```
+
+Follow the step-by-step guide in `configs/README.md` to set up your environment.
+
+---
+
 ## 🎯 Key Learnings
-- Configuring virtualized networks with Ubuntu and VirtualBox
-- Applying firewall rules (UFW and iptables) for security
-- Managing Linux services (Apache, SSH, Samba)
-- Writing clear technical documentation
-- Understanding differences in Linux vs Windows boot processes
 
-Understanding differences in Linux vs Windows boot processes
+- Configuring virtual networks in Ubuntu using VirtualBox
+- Applying robust firewall rules with UFW and iptables
+- Managing essential Linux services: Apache, SSH, Samba
+- Documenting technical processes clearly
+- Understanding boot process differences: Linux vs. Windows
 
-📖 Full Report
-For the complete academic report with detailed explanations and screenshots, see:
-👉 report.pdf
+---
+
+## 📖 Full Academic Report
+
+For detailed explanations and screenshots, view:  
+👉 **[report.pdf](./report.pdf)**
+
+---
 
 ## 👨‍💻 Author
-Sivonei Ribeiro dos Santos  
+
+**Sivonei Ribeiro dos Santos**  
 Higher Diploma in Science in Computing – CCT College Dublin
+
+---
+
+*Feel free to reach out with feedback or questions!*
